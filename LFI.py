@@ -20,7 +20,7 @@ def main():
 				print("LFI Probable: {}".format(parser.target+p))
 				b = BeautifulSoup(chimichurri.text,'html5lib')
 				print(b.blockquote.text)
-				op = input("Vos endesearias consultar archivos?: s/n: ")
+				op = input("Consultar archivos?: s/n: ")
 				if op.lower() == "s":
 					while True:
 						files = input("Archivo: ")
@@ -29,11 +29,11 @@ def main():
 							bf = BeautifulSoup(qf.text,'html5lib')
 							print(bf.blockquote.text)
 						else:
-							print("Fallo en la consulta del archivo. Lo siento, pero eres un fracasade...")
+							print("Fallo en la consulta del archivo.")
 
 			print("\n================================================")
 	else:
-		print("Especificame el Objetivo mi rey")
+		print("Especifica el Objetivo! ")
 
 
 
